@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product preview</title>
+    <style>
+        #main-img{
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+            border: 1px solid black;
+            border-radius: 5px;
+            display: block;
+            margin: 20px auto;
+        }
+        .ImgContainer{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 20px;
+        }
+        .sub-img{
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border: 1px solid black;
+            cursor: pointer;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <img src="img1.jpeg" id="main-img" alt="main image"/>
+    <div class="ImgContainer">
+        <img src="img1.jpeg" class="sub-img" alt="1st image" id="img1" onclick="change('img1.jpeg')">
+        <img src="img2.webp" class="sub-img" alt="2nd image" id="img2" onclick="change('img2.webp')">
+        <img src="img3.jpeg" class="sub-img" alt="3rd image" id="img3" onclick="change('img3.jpeg')">
+        <img src="img4.jpeg" class="sub-img" alt="4th image" id="img4" onclick="change('img4.jpeg')">
+    </div>
+    <script>
+        function change(imgName)
+        {
+            const mainImg = document.getElementById('main-img');
+            
+            mainImg.src = imgName;
+        }
+    </script>
+</body>
+</html>
